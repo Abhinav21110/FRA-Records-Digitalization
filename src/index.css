@@ -194,34 +194,6 @@
     z-index: -2;
   }
 
-  .glass-flow-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 50% 10%, hsl(var(--accent) / 0.10) 0%, transparent 50%),
-      radial-gradient(circle at 10% 90%, hsl(var(--tertiary) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 90% 50%, hsl(var(--primary-glow) / 0.06) 0%, transparent 50%);
-    animation: flow-morph 20s ease-in-out infinite;
-  }
-
-  .glass-flow-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      linear-gradient(45deg, transparent 30%, hsl(var(--primary-glow) / 0.05) 50%, transparent 70%),
-      linear-gradient(-45deg, transparent 30%, hsl(var(--secondary-glow) / 0.05) 50%, transparent 70%);
-    animation: shimmer-overlay 25s linear infinite;
-  }
 
   /* Enhanced Glassmorphism Containers */
   .glass-container {

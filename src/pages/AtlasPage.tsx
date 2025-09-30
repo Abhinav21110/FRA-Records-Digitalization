@@ -39,22 +39,12 @@ export const AtlasPage = () => {
     <div className="container mx-auto p-6 space-y-8">
       {/* Header */}
       <ScrollAnimatedSection className="text-center space-y-4">
-        <motion.h1 
-          className="text-4xl font-bold text-glass-glow"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-        >
+        <h1 className="text-4xl font-bold text-glass-glow">
           FRA Digital Atlas
-        </motion.h1>
-        <motion.p 
-          className="text-xl text-muted-foreground max-w-2xl mx-auto"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
+        </h1>
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Interactive Geospatial Data Visualization for Informed Decision Making
-        </motion.p>
+        </p>
       </ScrollAnimatedSection>
 
       {/* Main Content - Map & Controls */}
@@ -82,7 +72,7 @@ export const AtlasPage = () => {
           </ScrollAnimatedSection>
 
           {/* Layer Controls */}
-          <ScrollAnimatedSection className="glass-container p-6 rounded-2xl">
+          <div className="glass-container p-6 rounded-2xl">
             <div className="flex items-center space-x-3 mb-4">
               <Layers className="h-5 w-5 text-secondary" />
               <h3 className="text-lg font-semibold">Layer Controls</h3>
@@ -121,7 +111,7 @@ export const AtlasPage = () => {
                 </motion.div>
               ))}
             </div>
-          </ScrollAnimatedSection>
+          </div>
         </div>
       </div>
 

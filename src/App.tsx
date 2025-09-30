@@ -8,6 +8,7 @@ import { AtlasPage } from "./pages/AtlasPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { ArchivePage } from "./pages/ArchivePage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/Layout/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <AppContent />
       </BrowserRouter>
     </TooltipProvider>

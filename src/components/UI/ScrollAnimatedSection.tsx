@@ -19,7 +19,7 @@ export const ScrollAnimatedSection = ({
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { 
     amount: threshold,
-    margin: "-100px 0px -100px 0px"
+    margin: "0px"
   });
   const controls = useAnimation();
 
@@ -79,12 +79,12 @@ export const ScrollAnimatedSection = ({
       animate={controls}
       variants={variants}
       transition={{
-        duration: 0.8,
+        duration: 0.4,
         delay,
         ease: [0.23, 1, 0.32, 1],
         type: "spring",
-        stiffness: 100,
-        damping: 15
+        stiffness: 200,
+        damping: 25
       }}
     >
       {children}
