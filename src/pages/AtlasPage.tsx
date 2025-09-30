@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
-  Map as MapIcon,
   Layers,
   Filter,
   Users,
@@ -17,6 +16,7 @@ import {
 import { ScrollAnimatedSection } from "../components/UI/ScrollAnimatedSection";
 import { AnimatedCounter } from "../components/UI/AnimatedCounter";
 import { Button } from "../components/UI/button";
+import { GoogleMapSample } from "../components/UI/GoogleMapSample";
 
 export const AtlasPage = () => {
   const [activeLayers, setActiveLayers] = useState(["water", "pmkisan"]);
@@ -61,9 +61,8 @@ export const AtlasPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Map Area */}
         <ScrollAnimatedSection className="lg:col-span-2 glass-container p-4 rounded-2xl min-h-[600px]">
-          <div className="w-full h-full bg-muted rounded-lg flex items-center justify-center">
-            <MapIcon className="h-32 w-32 text-muted-foreground/50" />
-            <p className="absolute text-muted-foreground">Interactive Map Area</p>
+          <div className="w-full h-[560px] rounded-lg overflow-hidden">
+            <GoogleMapSample center={mapCenter} activeTypes={activeLayers as any} />
           </div>
         </ScrollAnimatedSection>
 
